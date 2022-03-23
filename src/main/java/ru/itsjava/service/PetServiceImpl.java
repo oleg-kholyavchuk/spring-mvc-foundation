@@ -6,8 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.itsjava.domain.Pet;
 import ru.itsjava.repository.PetRepository;
 
-import java.util.List;
-
 @Service
 @RequiredArgsConstructor
 @SuppressWarnings("ALL")
@@ -32,7 +30,7 @@ public class PetServiceImpl implements PetService {
 
     @Transactional(readOnly = true)
     @Override
-    public List<Pet> getAllPet() {
-        return petRepository.findAll();
+    public Pet getPetById(long id) {
+        return petRepository.findById(id).get();
     }
 }

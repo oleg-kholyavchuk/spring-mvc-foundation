@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringMvcFoundationApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		SpringApplication.run(SpringMvcFoundationApplication.class, args);
-	}
+        SpringApplication.run(SpringMvcFoundationApplication.class, args);
+    }
 
 }

@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "animals")
+@Entity(name = "animal")
 public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

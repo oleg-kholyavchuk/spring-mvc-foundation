@@ -11,4 +11,4 @@ values (2, 'china_hamster', 2);
 insert into breeding_place(id, name, animal_id)
 values (1, 'Italy', 1);
 insert into breeding_place(id, name, animal_id)
-values (2, 'France', 1);
+values (2, 'France', 2);

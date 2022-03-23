@@ -17,7 +17,7 @@ import java.util.List;
 public class AnimalController {
     private final AnimalService animalService;
 
-    @GetMapping("/animals")
+    @GetMapping("/animal")
     public String animalPage(Model model) {
         List<Animal> allAnimal =animalService.getAllAnimals();
         List<AnimalDto> animalDtos = new ArrayList<>();
@@ -25,7 +25,7 @@ public class AnimalController {
         for (Animal animal: allAnimal) {
             animalDtos.add(AnimalDto.toDto(animal));
         }
-        model.addAttribute("animals", animalDtos);
+        model.addAttribute("animal", animalDtos);
         return "animal-page";
     }
 }
