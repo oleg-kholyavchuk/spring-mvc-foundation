@@ -19,10 +19,10 @@ public class AnimalController {
 
     @GetMapping("/animal")
     public String animalPage(Model model) {
-        List<Animal> allAnimal =animalService.getAllAnimals();
+        List<Animal> allAnimal = animalService.getAllAnimals();
         List<AnimalDto> animalDtos = new ArrayList<>();
 
-        for (Animal animal: allAnimal) {
+        for (Animal animal : allAnimal) {
             animalDtos.add(AnimalDto.toDto(animal));
         }
         model.addAttribute("animal", animalDtos);

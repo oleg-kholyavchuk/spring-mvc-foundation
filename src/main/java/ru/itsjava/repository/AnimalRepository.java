@@ -8,5 +8,6 @@ import java.util.Optional;
 
 @SuppressWarnings("all")
 public interface AnimalRepository extends JpaRepository<Animal, Long> {
+    void deleteAllByPet(Pet pet);
     Optional<Animal> findAnimalByBreedAndPet(String breed, Pet pet);
 }

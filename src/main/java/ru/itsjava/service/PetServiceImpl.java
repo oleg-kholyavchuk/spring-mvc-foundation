@@ -4,13 +4,17 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.itsjava.domain.Pet;
+import ru.itsjava.repository.AnimalRepository;
 import ru.itsjava.repository.PetRepository;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 @SuppressWarnings("ALL")
 public class PetServiceImpl implements PetService {
     private final PetRepository petRepository;
+    private final AnimalRepository animalRepository;
 
     @Transactional
     @Override
@@ -42,7 +46,19 @@ public class PetServiceImpl implements PetService {
 
     @Transactional
     @Override
-    public void deletePetById(long id) {
-        petRepository.deleteById(id);
+    public void deletePet(Pet pet) {
+        animalRepository.deleteAllByPet(pet);
+        petRepository.delete(pet);
+    }
+
+    @Override
+    public List<Pet> getAllPets() {
+        return petRepository.findAll();
+    }
+
+    @Override
+    public void updatePet(Pet pet) {
+        petRepository.save(pet);
+
     }
 }
