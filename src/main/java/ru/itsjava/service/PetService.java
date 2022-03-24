@@ -6,5 +6,7 @@ import ru.itsjava.domain.Pet;
 public interface PetService {
     void changePet(String oldPet, String updatedPet);
     void printPet(String pet);
+    void createGenre(Pet pet);
     Pet getPetById(long id);
+    void deletePetById(long id);
 }

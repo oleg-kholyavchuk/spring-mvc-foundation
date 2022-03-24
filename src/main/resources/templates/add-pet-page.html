@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="add-pet-form" th:action="@{/pet/add}"
+      th:method="post" action="add-pet-page.html">
+  <h1>Pet Info:</h1>
+
+  <div class="row">
+    <label for="pet-input">Name:</label>
+    <input id="pet-input" name="pet" type="text" value=""/>
+  </div>
+</form>
+</body>
+</html>
