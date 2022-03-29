@@ -12,18 +12,20 @@ public class BreedingPlaceDto {
     private String name;
     private String animal_id;
 
-    public BreedingPlace fromDto(BreedingPlaceDto breedingPlaceDto) {
-        long id = Long.parseLong(breedingPlaceDto.id);
-        long animal_id = Long.parseLong(breedingPlaceDto.animal_id);
+    public static BreedingPlace fromDto(BreedingPlaceDto breedingPlaceDto) {
+        if(breedingPlaceDto.id == null) {
+            breedingPlaceDto.id = "0";
+        }
 
-        return new BreedingPlace(id, breedingPlaceDto.name, animal_id);
+        if(breedingPlaceDto.animal_id == null) {
+            breedingPlaceDto.animal_id = "0";
+        }
+
+        return new BreedingPlace(Long.parseLong(breedingPlaceDto.id), breedingPlaceDto.name, Long.parseLong(breedingPlaceDto.animal_id));
     }
 
-    public BreedingPlaceDto toDto(BreedingPlace breedingPlace) {
-        String id = String.valueOf(breedingPlace.getId());
-        String breedingPlaces = breedingPlace.getName();
-        String animal_id = String.valueOf(breedingPlace.getAnimal_id());
-
-        return new BreedingPlaceDto(id, breedingPlaces, animal_id);
+    public static BreedingPlaceDto toDto(BreedingPlace breedingPlace) {
+        return new BreedingPlaceDto(String.valueOf(breedingPlace.getId())
+                , breedingPlace.getName(), String.valueOf(breedingPlace.getAnimal_id()));
     }
 }

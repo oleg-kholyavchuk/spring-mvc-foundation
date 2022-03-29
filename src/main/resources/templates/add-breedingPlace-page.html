@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Breeding Place</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<h1>
+    Add Breeding Place
+</h1>
+<body>
+<form id="add-breedingPlace-form" th:action="@{/breedingPlace/add}"
+      th:method="post" action="add-breedingPlace-page.html">
+    <h2>Breeding Place Info:</h2>
+
+    <div class="row">
+        <label for="breedingPlace-input">Name:</label>
+        <input id="breedingPlace-input" name="name" name="animal_id" type="text" value=""/>
+    </div>
+</form>
+</body>
+</html>

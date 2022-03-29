@@ -34,7 +34,7 @@ public class PetServiceImpl implements PetService {
 
     @Transactional(readOnly = true)
     @Override
-    public void createGenre(Pet pet) {
+    public void createPet(Pet pet) {
         petRepository.save(pet);
     }
 
@@ -59,6 +59,5 @@ public class PetServiceImpl implements PetService {
     @Override
     public void updatePet(Pet pet) {
         petRepository.save(pet);
-
     }
 }

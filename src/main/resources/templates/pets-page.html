@@ -2,9 +2,17 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Pets</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+    <style>
+      table { margin: 10px auto; }
+      table, td, th { border: 1px solid black; }
+    </style>
 </head>
-Genres:
+<h1>
+    Pets
+</h1>
 <body>
 <table>
     <tr th:each="pet: ${pets}">
@@ -19,6 +27,6 @@ Genres:
     </tr>
 </table>
 
-<a th:href="@{/pet/add}" href="add-pet-page.html">Add new Genre</a>
+<a th:href="@{/pet/add}" href="add-pet-page.html">Add new Pet</a>
 </body>
 </html>

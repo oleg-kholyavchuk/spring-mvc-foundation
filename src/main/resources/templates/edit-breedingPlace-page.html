@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Breeding Place</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<h1>
+    Edit Breeding Place
+</h1>
+<body>
+<form id="edit-form" th:action="@{/breedingPlace/{id}/edit(id=${breedingPlaceDto.id})}" th:method="post" action="edit-breedingPlace-page.html">
+    <h2>Breeding Place</h2>
+
+    <div class="row">
+        <label for="id-input">ID:</label>
+        <input id="id-input" type="text" readonly="readonly" th:value="${breedingPlaceDto.id}" value="1"/>
+    </div>
+
+    <div class="row">
+        <label for="breed-input">Name:</label>
+        <input id="breed-input" name="name" type="text" th:value="${breedingPlaceDto.name}" value="Default Name"/>
+    </div>
+
+    <div class="row">
+        <label for="breed-input">Animal Id:</label>
+        <input id="animal_id-input" name="animal_id" type="text" th:value="${breedingPlaceDto.animal_id}" value="Default Animal Id"/>
+    </div>
+
+    <div class="row">
+        <button type="submit">Save</button>
+    </div>
+</form>
+</body>
+</html>

@@ -2,15 +2,36 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Animal</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+    <style>
+      table { margin: 10px auto; }
+      table, td, th { border: 1px solid black; }
+    </style>
 </head>
-Animal:
+<h1>
+    Website with animals
+</h1>
+<h3>
+    Welcome! See what kind of animals we have
+</h3>
+<h2>
+    Animal:
+</h2>
 <body>
 <table>
+    <th>Breed</th><th>Animal</th><th>Breeding Place</th><th>Link Pet</th><th>Link Breeding Place</th>
   <tr th:each="animal: ${animal}">
     <td th:text="${animal.breed}"></td>
     <td th:text="${animal.pet}"></td>
     <td th:text="${animal.breedingPlace}"></td>
+      <td>
+          <a th:href="@{/pet}" href="pets-page.html">Pets</a>
+      </td>
+      <td>
+          <a th:href="@{/breedingPlace}" href="breedingPlaces-page.html">Breeding Places</a>
+      </td>
   </tr>
 </table>
 </body>

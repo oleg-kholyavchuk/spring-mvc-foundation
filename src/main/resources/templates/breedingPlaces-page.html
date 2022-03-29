@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Breeding Place</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+    <style>
+      table { margin: 10px auto; }
+      table, td, th { border: 1px solid black; }
+    </style>
+</head>
+<h1>
+    Breeding Place
+</h1>
+<body>
+<table>
+    <tr th:each="breedingPlace: ${breedingPlaces}">
+        <td th:text="${breedingPlace.id}">The Breeding Place Id</td>
+        <td th:text="${breedingPlace.name}">The Breeding Place Name</td>
+        <td th:text="${breedingPlace.animal_id}">The Breeding Place Animal Id</td>
+        <td>
+            <a th:href="@{/breedingPlace/{id}/edit(id=${breedingPlace.id})}" href="edit-breedingPlace-page.html">Update</a>
+        </td>
+        <td>
+            <a th:href="@{/breedingPlace/{id}/delete(id=${breedingPlace.id})}" href="delete-breedingPlace-page.html">Delete</a>
+        </td>
+    </tr>
+</table>
+
+<a th:href="@{/breedingPlace/add}" href="add-breedingPlace-page.html">Add new Genre</a>
+</body>
+</html>

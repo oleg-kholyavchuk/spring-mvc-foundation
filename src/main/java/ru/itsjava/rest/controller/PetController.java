@@ -25,12 +25,12 @@ public class PetController {
         return "get-pet-page";
     }
 
-    @GetMapping("/")
+    @GetMapping("/pet")
     public String genresPage(Model model) {
-        List<PetDto> allGenresDto = petService.getAllPets()
+        List<PetDto> allPetsDto = petService.getAllPets()
                 .stream().map(PetDto::toDto).collect(Collectors.toList());
 
-        model.addAttribute("pets", allGenresDto);
+        model.addAttribute("pets", allPetsDto);
         return "pets-page";
     }
 
@@ -41,7 +41,7 @@ public class PetController {
 
     @PostMapping("pet/add")
     public String afterAddPost(PetDto petDto) {
-        petService.createGenre(PetDto.fromDto(petDto));
+        petService.createPet(PetDto.fromDto(petDto));
         return "redirect:/";
     }
 

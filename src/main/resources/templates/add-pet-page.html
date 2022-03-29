@@ -2,12 +2,17 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Add Pet</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
 </head>
+<h1>
+    Add Pet
+</h1>
 <body>
 <form id="add-pet-form" th:action="@{/pet/add}"
       th:method="post" action="add-pet-page.html">
-  <h1>Pet Info:</h1>
+  <h2>Pet Info:</h2>
 
   <div class="row">
     <label for="pet-input">Name:</label>

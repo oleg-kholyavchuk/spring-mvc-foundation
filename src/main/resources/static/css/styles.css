@@ -1,0 +1,32 @@
+h1, h3, td, table {
+        text-align: center;
+}
+
+h3, h2, td {
+            font-style: italic;
+}
+
+h1 {
+    color: #00C618;
+}
+
+h3 {
+    color: #0C5DA5;
+}
+
+h2 {
+    text-indent: 450px;
+    font-size: 20px;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+div {
+     text-indent: 475px;
+}
+
+td {
+    color: #FF2300;
+	width: 100px;
+	height: 50px;
+}
