@@ -10,5 +10,4 @@ public class SpringMvcFoundationApplication {
 
         SpringApplication.run(SpringMvcFoundationApplication.class, args);
     }
-
 }
