@@ -14,6 +14,6 @@ pet_id bigint references pet(id)
 create table breeding_place(
 id bigint primary key auto_increment,
 name varchar(256),
-animal_id bigint
---animal_id bigint references animal(id)
+--animal_id bigint
+animal_id bigint references animal(id)
 );

@@ -21,7 +21,7 @@
 </h2>
 <body>
 <table>
-    <th>Breed</th><th>Animal</th><th>Breeding Place</th><th>Link Pet</th><th>Link Breeding Place</th>
+    <th>Breed</th><th>Animal</th><th>Breeding Place</th><th>Link Pet</th><th>Link Breeding Place</th><th>Link add Animal</th>
   <tr th:each="animal: ${animal}">
     <td th:text="${animal.breed}"></td>
     <td th:text="${animal.pet}"></td>
@@ -31,6 +31,9 @@
       </td>
       <td>
           <a th:href="@{/breedingPlace}" href="breedingPlaces-page.html">Breeding Places</a>
+      </td>
+      <td>
+          <a th:href="@{/animal/add}" href="add-animal-page.html">Animals</a>
       </td>
   </tr>
 </table>

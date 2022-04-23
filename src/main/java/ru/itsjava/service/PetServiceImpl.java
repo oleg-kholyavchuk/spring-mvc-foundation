@@ -32,7 +32,7 @@ public class PetServiceImpl implements PetService {
         System.out.println(pets);
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     @Override
     public void createPet(Pet pet) {
         petRepository.save(pet);

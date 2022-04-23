@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>
+  Animal Pet
+</h1>
+<body>
+<form id="add-animal-form" th:action="@{/animal/add}"
+      th:method="post" action="add-animal-page.html">
+  <h2>Animal Info:</h2>
+
+  <div class="row">
+    <label for="breed-input">Breed:</label>
+    <input id="breed-input" name="breed" type="text" value=""/>
+  </div>
+  <div class="row">
+    <label for="pet-input">Pet:</label>
+    <input id="pet-input" name="pet" type="text" value=""/>
+  </div>
+  <div class="row">
+    <label for="breedingPlace-input">Breeding Place:</label>
+    <input id="breedingPlace-input" name="breedingPlace" type="text" value=""/>
+  </div>
+  <div class="row">
+    <button type="submit">Save</button>
+  </div>
+</form>
+</body>
+</html>

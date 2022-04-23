@@ -19,6 +19,9 @@ public class AnimalDto {
     private String breedingPlace;
 
     public static Animal fromDto(AnimalDto animalDto) {
+        if(animalDto.id == null) {
+            animalDto.id = "0";
+        }
         long id = Long.parseLong(animalDto.id);
         Pet pet = new Pet(0L, animalDto.pet);
         String[] splitPlaces = animalDto.breedingPlace.split(",");
@@ -40,7 +43,7 @@ public class AnimalDto {
         for (BreedingPlace place: animal.getBreedingPlace()) {
             stringBuilder.append(place.getName()).append(",");
         }
-        stringBuilder.deleteCharAt(stringBuilder.length() - 1 );
+//        stringBuilder.deleteCharAt(stringBuilder.length() - 1 );
 
         String places = stringBuilder.toString();
 

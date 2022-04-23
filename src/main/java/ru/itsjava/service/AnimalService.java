@@ -8,4 +8,5 @@ import java.util.List;
 public interface AnimalService {
     void printAllAnimals();
     List<Animal> getAllAnimals();
+    void createAnimal(Animal animal);
 }

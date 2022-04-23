@@ -32,7 +32,7 @@ public class BreedingPlaceServiceImpl implements BreedingPlaceService{
 //        System.out.println(breedingPlaces);
 //    }
 
-    @Transactional(readOnly = true)
+    @Transactional
     @Override
     public void createBreedingPlace(BreedingPlace breedingPlace) {
         breedingPlaceRepository.save(breedingPlace);
